@@ -1,9 +1,12 @@
-import {Layout} from "./components/Layout";
+import {Layout} from "./components/Layout/Layout";
+import FeaturedMovie from "./components/movie/FeaturedMovie";
 function App() {
 
   return (
     <>
-      <Layout/>
+      <Layout>
+        <FeaturedMovie />
+      </Layout>
     </>
   )
 }
