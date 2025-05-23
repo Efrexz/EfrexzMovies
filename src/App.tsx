@@ -1,11 +1,17 @@
-import {Layout} from "./components/Layout/Layout";
-import FeaturedMovie from "./components/movie/FeaturedMovie";
+import { Suspense, lazy } from 'react';
+import Layout from "@components/Layout/Layout";
+
+
 function App() {
+
+  const HomePage = lazy(() => import('@pages/HomePage'));
 
   return (
     <>
       <Layout>
-        <FeaturedMovie />
+        <Suspense fallback={<div>Loading...</div>}>
+          <HomePage />
+        </Suspense>
       </Layout>
     </>
   )

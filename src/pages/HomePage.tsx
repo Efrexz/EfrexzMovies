@@ -1,4 +1,4 @@
-
+import FeaturedMovie from "@components/movie/FeaturedMovie";
 
 function HomePage  ()  {
   return (
@@ -9,4 +9,4 @@ function HomePage  ()  {
   );
 };
 
-export {HomePage};
+export default HomePage;

@@ -1,4 +1,4 @@
-import { Header } from "./Header";
+import Header from "./Header";
 
 function Layout({ children }: { children: React.ReactNode }){
     return(
@@ -11,4 +11,4 @@ function Layout({ children }: { children: React.ReactNode }){
     )
 }
 
-export {Layout}
+export default Layout;
