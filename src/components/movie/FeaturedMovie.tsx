@@ -55,7 +55,7 @@ function FeaturedMovie (){
             <nav className="flex flex-wrap gap-4">
               <button
                 type='button'
-                className="flex items-center px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-medium rounded-md transition duration-200 gap-2"
+                className="flex items-center px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-medium rounded-md transition duration-200 gap-2 cursor-pointer"
                 aria-label="Watch the movie trailer"
               >
                 <PlayIcon className="w-5 h-5" aria-hidden="true" />
@@ -64,7 +64,7 @@ function FeaturedMovie (){
               
               <button
                 type='button'
-                className="flex items-center px-6 py-3 bg-gray-800 hover:bg-gray-700 text-white font-medium rounded-md transition duration-200 gap-2"
+                className="flex items-center px-6 py-3 bg-gray-800 hover:bg-gray-700 text-white font-medium rounded-md transition duration-200 gap-2 cursor-pointer"
                 aria-label="See more information about the movie"
               >
                 More Info

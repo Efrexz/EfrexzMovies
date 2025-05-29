@@ -1,5 +1,7 @@
 import { Suspense, lazy } from 'react';
 import Layout from "@components/Layout/Layout";
+// import LoadingSpinner from '@components/loadinSpinner/LoadingSpinner';
+import LoadingSpinner from '@components/LoadingSpinner';
 
 
 function App() {
@@ -9,7 +11,7 @@ function App() {
   return (
     <>
       <Layout>
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<LoadingSpinner />}>
           <HomePage />
         </Suspense>
       </Layout>
