@@ -189,3 +189,7 @@ export const movies: Movie[] = [
 export function getPopularMovies(): Movie[] {
   return [...movies].sort((a, b) => b.rating - a.rating).slice(0, 12);
 };
+
+export function getRecommendedForYou (): Movie[]{
+  return [...movies].sort(() => 0.5 - Math.random()).slice(0, 6);
+};
