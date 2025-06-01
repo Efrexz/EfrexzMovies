@@ -1,7 +1,7 @@
 import { Suspense, lazy } from 'react';
 import Layout from "@components/Layout/Layout";
 // import LoadingSpinner from '@components/loadinSpinner/LoadingSpinner';
-import LoadingSpinner from '@components/LoadingSpinner';
+import LoadingSpinner from '@components/common/LoadingSpinner';
 
 
 function App() {

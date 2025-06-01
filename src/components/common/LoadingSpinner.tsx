@@ -1,4 +1,4 @@
-function Loader(){
+function LoadingSpinner(){
   return (
     <div className="flex items-center justify-center min-h-[50vh]">
       <div className="relative w-15 h-15">
@@ -9,4 +9,4 @@ function Loader(){
   );
 };
 
-export default Loader;
+export default LoadingSpinner;

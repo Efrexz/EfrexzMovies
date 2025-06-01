@@ -1,10 +1,29 @@
-import { Link } from 'react-router-dom';
+import NavigationColumn from '@components/NavigationColumn';
 import FilmIcon from '@assets/icons/film.svg?react';
 import InstagramIcon from '@assets/icons/socialMediaIcons/instagram.svg?react';
 import FacebookIcon from '@assets/icons/socialMediaIcons/facebook.svg?react';
 import GitHubIcon from '@assets/icons/socialMediaIcons/github.svg?react';
 
 function Footer () {
+
+  const navigationLinkData = [
+  { to: "/", label: "Home" },
+  { to: "/browse", label: "Browse Movies" },
+  { to: "/search", label: "Search" },
+];
+
+const accountLinkData = [
+  { to: "/login", label: "Sign In" },
+  { to: "/signup", label: "Sign Up" },
+  { to: "/profile", label: "Profile" },
+];
+
+const legalLinkData = [
+  { to: "#", label: "Terms of Service" },
+  { to: "#", label: "Privacy Policy" },
+  { to: "#", label: "Cookie Policy" },
+];
+
 
   return (
     <footer className="bg-gray-950 text-gray-400 py-12 ">
@@ -55,32 +74,9 @@ function Footer () {
             </div>
           </section>
 
-          <nav className="space-y-4 text-center sm:text-left">
-            <h3 className="text-white font-medium mb-4">Navigation</h3>
-            <ul className="flex sm:block gap-6 space-y-2 justify-center">
-              <li><Link to="/" className="hover:text-white transition-colors">Home</Link></li>
-              <li><Link to="/browse" className="hover:text-white transition-colors">Browse Movies</Link></li>
-              <li><Link to="/search" className="hover:text-white transition-colors">Search</Link></li>
-            </ul>
-          </nav>
-
-          <nav className="space-y-4 text-center sm:text-left">
-            <h3 className="text-white font-medium mb-4">Account</h3>
-            <ul className="flex sm:block gap-6 space-y-2 justify-center">
-              <li><Link to="/login" className="hover:text-white transition-colors">Sign In</Link></li>
-              <li><Link to="/signup" className="hover:text-white transition-colors">Sign Up</Link></li>
-              <li><Link to="/profile" className="hover:text-white transition-colors">Profile</Link></li>
-            </ul>
-          </nav>
-
-          <nav className="space-y-4 text-center sm:text-left">
-            <h3 className="text-white font-medium mb-4">Legal</h3>
-            <ul className="flex sm:block gap-6 space-y-2 justify-center">
-              <li><Link to="#" className="hover:text-white transition-colors">Terms of Service</Link></li>
-              <li><Link to="#" className="hover:text-white transition-colors">Privacy Policy</Link></li>
-              <li><Link to="#" className="hover:text-white transition-colors">Cookie Policy</Link></li>
-            </ul>
-          </nav>
+          <NavigationColumn title="Navigation" links={navigationLinkData} />
+          <NavigationColumn title="Account" links={accountLinkData} />
+          <NavigationColumn title="Legal" links={legalLinkData} />
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-sm text-center">
