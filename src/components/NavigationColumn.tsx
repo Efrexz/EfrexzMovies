@@ -13,7 +13,7 @@ interface NavigationColumnProps {
 
 function NavigationColumn({ title, links }: NavigationColumnProps) {
   return (
-    <nav className="space-y-4 text-center sm:text-left">
+    <nav className="space-y-4 text-center md:text-left">
       <h3 className="text-white font-medium mb-4">{title}</h3>
       <ul className="space-y-2">
         {links.map((linkItem) => (

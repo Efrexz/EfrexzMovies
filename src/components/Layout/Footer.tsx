@@ -29,9 +29,9 @@ const legalLinkData = [
     <footer className="bg-gray-950 text-gray-400 py-12 ">
       <div className="w-full max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-          <section className="space-y-4 flex flex-col items-center text-center sm:items-start sm:text-left">
+          <section className="space-y-4 flex flex-col items-center text-center md:items-start md:text-left">
             <div >
-                <div className="flex items-center space-x-2 justify-center sm:justify-start">
+                <div className="flex items-center space-x-2 justify-center md:justify-start">
                     <FilmIcon className="text-red-600 h-8 w-8" aria-hidden="true" />
                     <span className="text-xl font-bold text-white">EfrexzMovies</span>
                 </div>
