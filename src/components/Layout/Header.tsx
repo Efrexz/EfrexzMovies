@@ -15,8 +15,8 @@ function Header() {
     function handleScroll () {
       setIsScrolled(window.scrollY > 50);
     }
-
     window.addEventListener('scroll', handleScroll);
+
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -75,31 +75,30 @@ function Header() {
                 <a className='hover:text-gray-200' href="#">Browse</a>
               </nav>
                 
-              {isLogin ? (
-              <div className="relative group">
+            {isLogin ? (
+              <div>
                 <button 
-                  className="text-white flex items-center focus:outline-none"
+                  className="text-white flex items-center focus:outline-none cursor-pointer"
                   aria-label="User menu"
-                >
+                  >
                   <div className="w-9 h-9 rounded-full bg-gradient-to-r from-purple-500 to-red-500 flex items-center justify-center transition-transform hover:scale-110"
                   >
-                    <UserIcon className="w-5 h-5" />
+                    <UserIcon className="w-5 h-5" aria-hidden="true" />
                   </div>
                 </button>
               </div>
-            ) : (
-              <button 
-                className="px-4 py-2 rounded-full bg-red-500 text-white font-medium text-sm hover:bg-red-600 hover:text-gray-200 cursor-pointer hover:scale-105 transition-transform duration-200"
-                onClick={() => setIsLogin(!isLogin)}
-              >
-                Sign In
-              </button>
-            )}
-            </div>
+              ) : (
+                <button
+                  className="px-4 py-2 rounded-full bg-red-500 text-white font-medium text-sm hover:bg-red-600 hover:text-gray-200 cursor-pointer hover:scale-105 transition-transform duration-200"
+                  onClick={() => setIsLogin(!isLogin)}
+                >
+                  Sign In
+                </button>
+              )}
+              </div>
 
-             
-            
-            <button 
+            {/* Boton de menu mobile */}
+            <button
               className="md:hidden text-white"
               onClick={toggleMobileMenu}
             >

@@ -1,12 +1,15 @@
+import { Outlet } from 'react-router-dom';
 import Header from "./Header";
 import Footer from "./Footer";
 
-function Layout({ children }: { children: React.ReactNode }){
+
+
+function Layout(){
     return(
         <>
         <Header/>
         <main className="flex-grow bg-[#111827] text-white">
-            {children}
+            <Outlet />
         </main>
         <Footer/>
         </>
