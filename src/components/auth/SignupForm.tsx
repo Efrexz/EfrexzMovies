@@ -61,8 +61,8 @@ function SignupForm() {
       })}
 
       <button
-        type="submit"
-        className="w-full py-3 rounded-md font-medium bg-red-600 hover:bg-red-700 text-white transition-colors"
+        type="button"
+        className="w-full py-3 rounded-md font-medium bg-red-600 hover:bg-red-700 text-white transition-colors cursor-pointer"
       >
         Sign Up
       </button>
