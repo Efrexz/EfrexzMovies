@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import FilmIcon from '@assets/icons/film.svg?react';
 import SearchIcon from '@assets/icons/search.svg?react';
 import UserIcon from '@assets/icons/user.svg?react';
@@ -10,6 +11,8 @@ function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isLogin, setIsLogin] = useState(false);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     function handleScroll () {
@@ -90,7 +93,10 @@ function Header() {
               ) : (
                 <button
                   className="px-4 py-2 rounded-full bg-red-500 text-white font-medium text-sm hover:bg-red-600 hover:text-gray-200 cursor-pointer hover:scale-105 transition-transform duration-200"
-                  onClick={() => setIsLogin(!isLogin)}
+                  onClick={() => {
+                    setIsLogin(!isLogin);
+                    navigate('/login');
+                  }}
                 >
                   Sign In
                 </button>
